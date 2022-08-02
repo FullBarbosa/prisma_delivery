@@ -1,4 +1,4 @@
-import "express-async-errors"
+import "express-async-errors";
 import express, { NextFunction, Request, Response } from "express";
 import { routes } from "./routes";
 const app = express();
@@ -12,7 +12,7 @@ app.use(
     return response.status(400).json({message: err.message})
   };
 
-  return response.status(200).json({
+  return response.status(500).json({
     status:"error",
     message: "Internal Server Error"
   })
